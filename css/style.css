@@ -45,7 +45,8 @@ a:hover {
 }
 
 header {
-    width: 700px;
+    max-width: 700px;
+    min-width: 320px;
     margin: 0 auto 1.5em auto;
 }
 
@@ -75,6 +76,7 @@ header h1 {
     padding: 3em;
     background: url(https://www.sentry.dev/_assets2/static/squiggle-trans-abd5701f276211cbe57fe0748b18937c.png),linear-gradient(315deg, #180d1c 0.57%, #452650 100%);
     z-index: -2;
+    min-width: 340px;
 }
 
 .container {
@@ -83,6 +85,7 @@ header h1 {
     min-height: 100vh;
     max-width: 700px;
     margin: 0 auto 5em auto;
+    min-width: 320px;
 }
 .content {
     padding-left: 2rem;
@@ -305,4 +308,12 @@ ul {
 }
 .sentry-violet h4 {
     text-shadow: 2px 2px 0px var(--dark-violet);
+}
+
+
+
+@media (max-width: 560px) {
+    .head .summary {
+        flex-direction: column;
+    }
 }
