@@ -1,0 +1,308 @@
+:root {
+    --gold: #F1B71C;
+    --dark-gold: #D79528;
+    --flame: #F4834F;
+    --dark-flame: #DF5128;
+    --pink: #E1567C;
+    --dark-pink: #C83852;
+    --purple: #8D5494;
+    --dark-purple: #452650;
+    --violet: #584774;
+    --dark-violet: #362d59;
+
+}
+
+body {
+    color: var(--dark-violet);
+    font-family: Rubik,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+    font-size: 1rem;
+    line-height: 2;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 0;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 200;
+    font-family: astounder-squared-bb;
+    margin: 0 0 0.75em 0;
+    letter-spacing: 1px;
+    text-shadow: 3px 3px 0 #181225;
+}
+
+a {
+    color: #66C7C5;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: none;
+    /* border-bottom: solid 1px var(--pink); */
+    background-color:var(--pink);
+}
+
+header {
+    width: 700px;
+    margin: 0 auto 1.5em auto;
+}
+
+header img.logo {
+    max-height: 55px;
+    display: inline;
+    position: relative;
+    top: 15px;
+}
+
+header h1 {
+    display: inline-block;
+    margin-left: 12px;
+}
+
+::selection {
+    background: #e1567c;
+    color: #fff;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+.bg {
+    position: relative;
+    padding: 3em;
+    background: url(https://www.sentry.dev/_assets2/static/squiggle-trans-abd5701f276211cbe57fe0748b18937c.png),linear-gradient(315deg, #180d1c 0.57%, #452650 100%);
+    z-index: -2;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 700px;
+    margin: 0 auto 5em auto;
+}
+.content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.head .summary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button.expand {
+    font: inherit;
+    border: none;
+    display: inline;
+    margin-left: auto;
+    padding: 0 0.875em;
+
+    background-color: #F5F2F7;
+    border-color: transparent;
+    box-shadow: none;
+    color: var(--pink);
+    border: 0;
+    border-radius: 2em;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    font-size: 0.875em;
+    font-weight: 700;;
+    letter-spacing: 0.2px;
+    height: 2.5em;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    transition: color .2s,border-color .2s,background-color .2s,box-shadow .2s,height .2s,line-height .2s,opacity .2s;
+}
+
+button.expand.collapsed svg {
+    transform: rotate(90deg);
+}
+
+button.expand svg {
+    transform: rotate(-90deg);
+}
+
+button.expand:hover {
+    color: var(--dark-violet);
+    cursor: pointer;
+}
+
+
+button.expand span {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline-block;
+    height: 1em;
+    line-height: 1.125em;
+}
+button.expand svg {
+    margin-right: -0.375em;
+    position: relative;
+    flex-shrink: 0;
+    height: 1em;
+    width: 1em;
+    transition: margin-right 0.2s,margin-left 0.2s;
+}
+
+.directions {
+    margin-top: 1.5em;
+    transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
+    max-height: 1500px;
+    opacity: 1;
+    overflow: hidden;
+}
+
+.directions.collapsed {
+    max-height: 0;
+    opacity: 0;
+}
+
+h4 {
+    font-size: 2em;
+    margin: 0;
+    font-weight: 200;
+    font-family: astounder-squared-bb;
+    letter-spacing: 1px;
+    color:#fff;
+}
+
+h5 {
+    font-size: 1em;
+    margin: 1em 0 0 0;
+}
+
+ul {
+    line-height: 1.75em;
+}
+
+.content img {
+    clip-path: circle(40%);
+    margin-right: 1.5em;
+    width: 220px;
+    margin-left: -22px;
+}
+
+.row {
+    /* padding-bottom: 3em; */
+    position: relative;
+    display:block;
+    margin-top: 3em;
+}
+
+.clip-slant {
+    overflow: hidden;
+    background-color: #f00;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: -3rem;
+    bottom: -5rem;
+    -webkit-clip-path: polygon(0% 0%, 100% 3rem, 100% calc(100% - 1.5rem), 0% calc(100% - 1.5rem));
+    clip-path: polygon(0% 0%, 100% 3rem, 100% calc(100% - 1.5rem), 0% calc(100% - 1.5rem));
+}
+
+.clip-slant.jagged {
+    -webkit-clip-path: polygon(0% 1rem, 50% 2rem, 50% 1rem, 100% 2rem, 100% calc(100% - 1.5rem), 0% calc(100% - 1.5rem));
+    clip-path: polygon(0% 1rem, 50% 2rem, 50% 1rem, 100% 2rem, 100% calc(100% - 1.5rem), 0% calc(100% - 1.5rem));
+}
+
+.clip-slant.jagged.end {
+    -webkit-clip-path: polygon(0% 1rem, 50% 2rem, 50% 1rem, 100% 2rem, 100% calc(100% - 1.5rem), 0% calc(100% - 1.5rem));
+    clip-path: polygon(0% 1rem, 50% 2rem, 50% 1rem, 100% 2rem, 100% calc(100% - 1.5rem), 0% calc(100% - 1.5rem));
+    transform: rotate(180deg);
+    bottom: -6rem;
+    top: 0;
+}
+
+.sentry-gold {
+    color: var(--dark-violet);
+    background-color: var(--gold);
+}
+.sentry-gold .clip-slant {
+    background-color: var(--gold);
+}
+
+.sentry-gold .wiggle {
+    color: var(--dark-gold);
+}
+.sentry-gold h4 {
+    text-shadow: 2px 2px 0px var(--dark-gold);
+}
+
+.sentry-flame {
+    color: var(--dark-violet);
+    background-color: var(--flame);
+}
+
+.sentry-flame .clip-slant {
+    background-color: var(--flame);
+}
+
+.sentry-flame .wiggle {
+    color: var(--dark-flame);
+}
+.sentry-flame h4 {
+    text-shadow: 2px 2px 0px var(--dark-flame);
+}
+
+.sentry-pink {
+    color: #fff;
+    background-color: var(--pink);
+}
+.sentry-pink .clip-slant {
+    background-color: var(--pink);
+}
+
+.sentry-pink .wiggle {
+    color: var(--dark-pink);
+}
+.sentry-pink h4 {
+    text-shadow: 2px 2px 0px var(--dark-pink);
+}
+
+.sentry-purple {
+    color: #fff;
+    background-color: var(--purple);
+}
+.sentry-purple .clip-slant {
+    background-color: var(--purple);
+}
+
+.sentry-purple .wiggle {
+    color: var(--dark-purple);
+}
+.sentry-purple h4 {
+    text-shadow: 2px 2px 0px var(--dark-purple);
+}
+
+.sentry-violet {
+    color: #fff;
+    background-color: var(--violet);
+}
+.sentry-violet .clip-slant {
+    background-color: var(--violet);
+}
+
+.sentry-violet .wiggle {
+    color: var(--dark-violet);
+}
+.sentry-violet h4 {
+    text-shadow: 2px 2px 0px var(--dark-violet);
+}
