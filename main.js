@@ -1,6 +1,5 @@
 
 const buttons = document.querySelectorAll('button.expand');
-console.log(buttons);
 
 function directions_click(event) {
     let placeholder = this.nextElementSibling;
@@ -11,6 +10,7 @@ function directions_click(event) {
         directions = placeholder;
         break;
       }
+      placeholder = placeholder.nextElementSibling;
     }
 
     if (directions){
